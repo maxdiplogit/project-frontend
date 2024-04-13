@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+// React Hooks
+import { Routes, Route } from 'react-router-dom';
+// import { useDispatch, useSelector } from 'react-redux';
+// import { Link, useNavigate } from 'react-router-dom';
+
+// Components
+import Home from './components/Home/Home';
+import SomeComponent from './components/SomeComponent/SomeComponent';
+
+// Store actions
+// import { authActions } from './store';
+
+// Styles
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const App = () => {
+	// const dispatch = useDispatch();
+    // const navigate = useNavigate();
+
+	// const isLoggedIn = useSelector((state) => state.auth.isLoggedIn);
+    // const loggedInUser = useSelector((state) => state.auth.loggedInUser);
+
+
+
+	return (
+		<>
+			<Routes>
+				<Route path='/' element={ <Home /> } />
+				<Route path='/hello' element={ <SomeComponent /> } />
+			</Routes>
+		</>
+	);
 }
 
 export default App;
